@@ -1,9 +1,19 @@
 version: '3.8'
 services:
   storybook:
-    build: .
+    build: 
+      context: .
+      dockerfile: storybook.Dockerfile
+    ports:
+      - 6006:6006
+    volumes:
+      - ./:/app
+  nuxt:
+    build:
+      context: .
+      dockerfile: nuxt.Dockerfile
     ports:
       - 3000:3000
     volumes:
-      - ./:/app/
+      - ./:/app
  
