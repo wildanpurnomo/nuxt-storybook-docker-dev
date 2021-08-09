@@ -1,4 +1,15 @@
 export default {
+  watchers: {
+      webpack: {
+        aggregateTimeout: 300,
+        poll: 1000
+      }
+  },
+  
+  server: {
+    host: '0.0.0.0'
+  },
+  
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-storybook',
